@@ -1,9 +1,15 @@
 {
-    "rewrites": [
+    "version": 2,
+    "builds": [
         {
-            "source": "/(.*)",
-            "destination": "routes/web.php"
+            "src": "api/index.php",
+            "use": "@vercel/php"
         }
     ],
-    "cleanUrls": true
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "routes/web.php"
+        }
+    ]
 }
